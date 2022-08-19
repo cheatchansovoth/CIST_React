@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+}
+button {
+  margin-top: 10%;
+}
