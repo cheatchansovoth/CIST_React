@@ -1,24 +1,27 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import "./App.css";
 
 function App() {
   const [title, setTittle] = useState("");
   const [author, setAuthor] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [published_date, setPublisheddate] = useState(Date());
-  // const [publisher, setPublisher] = useState("");
-  // const [update, setUpdate] = useState(Date());
+  const [description, setDescription] = useState("");
+  const [published_date, setPublisheddate] = useState(Date());
+  const [publisher, setPublisher] = useState("");
+  const [update, setUpdate] = useState(Date());
 
   const insert = () => {
     // console.log(
     //   title + author + description + published_date + publisher + update
     // );
-    // Axios.post("http://localhost:3001/insert", {
-    //   title: title,
-    //   author: author,
-    // });
-    console.log(title + author);
+    axios.post("http://localhost:3001/insert", {
+      title: title,
+      author: author,
+      description: description,
+      published_date: published_date,
+      publisher: publisher,
+      update: update,
+    });
   };
   return (
     <div className="App">
@@ -40,7 +43,7 @@ function App() {
         }}
       ></input>
       <label>Description</label>
-      {/* <input
+      <input
         type="text"
         className="form-control"
         onChange={(event) => {
@@ -70,7 +73,7 @@ function App() {
         onChange={(event) => {
           setUpdate(event.target.value);
         }}
-      ></input> */}
+      ></input>
       <button className="btn btn-primary" onClick={insert}>
         Primary
       </button>
