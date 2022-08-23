@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo img {
+  margin-left: 50%;
+}
+body {
+  background-image: url("/image/background.jpg");
+  /* background-position: center;  */
+  height: 200vh;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1.5rem;
+  /*  */
+}
+a {
+  text-decoration: none;
+}
+.content {
+  position: absolute;
+  left: 15%;
+  top: 10%;
+}
+.foodcard {
+  margin: 3%;
+}
+.content h1,
+h2 {
+  color: red;
+  font-weight: 900;
+}
+.category {
+  width: 720px;
+  height: 130px;
+  text-align: center;
+}
+.content-category {
+  top: 10%;
+  position: relative;
+}
+span {
+  color: white;
+}
+#navbarNav {
+  text-align: center;
+}
+#typed {
+  color: #00cfff;
+  font-weight: 900;
+}
+button {
+  margin-top: 3%;
+}
+@media only screen and (min-width: 996px) {
+  body {
+    height: 100vh;
+  }
+  .content-category {
+    position: absolute;
+    left: 30%;
+    top: 25%;
+  }
+}
